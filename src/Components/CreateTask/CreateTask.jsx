@@ -28,7 +28,7 @@ function CreateTask({ todo, setTodo }) {
      * @return {object} возвращает измененное значение todo и очищает поля ввода названия, описания и даты
      */
     function saveTask() {
-        if (isValid) {
+        if (!isValid) {
             setTodo(
                 [...todo, {
                     id: uuidv4(),
